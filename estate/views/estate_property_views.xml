@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="real_estate_action" model="ir.actions.act_window">
+        <field name="name"> </field>
+        <field name="res_model">estate.property</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="real_estate_view_tree" model="ir.ui.view">
+        <field name="name">real.estate.property.list</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <list string="RealState" >
+                <field name="name"/>
+                <field name="postcode"/>
+                <field name="bedrooms"/>
+                <field name="living_area"/>
+                <field name="expected_price"/>
+                <field name="selling_price"/>
+                <field name="date_availability"/>
+            </list>
+        </field>
+    </record>
+    <record id="real_estate_view_form" model="ir.ui.view">
+        <field name="name">real.estate.property.form</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <form string="My new House">
+                <sheet>
+                   <group>
+                        <field name="name"/>
+                   </group>
+                </sheet>
+            </form>
+        </field>
+    </record>    
+</odoo>
